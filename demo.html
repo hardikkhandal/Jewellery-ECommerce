@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webtech</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.3/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myctrl">
+        <table>
+            <form name="myForm">
+                <tr>
+                    <td><input type="text" name="name" ng-model="name" placeholder="Your Name"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="email" ng-model="email" placeholder="E-mail"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="subject" ng-model="subject" placeholder="Subject"></td>
+                </tr>
+                <tr>
+                    <td><textarea name="about" ng-model="about" Your Message"></textarea></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" ng-click="checkValidationOnClick()">Submit</button></td>
+                </tr>
+            </form>
+        </table>
+        <script>
+            var app = angular.module("myApp", []);
+            app.controller("myctrl", function ($scope) {
+                $scope.name = "";
+                $scope.email = "";
+                $scope.subject = "";
+                $scope.about = "";
+                $scope.checkValidationOnClick = function () {
+                    var flag = 0;
+                    if ($scope.name == "" || $scope.email == "" || $scope.about == "" || $scope.subject == "") {
+                        alert("All fields are mandatory and have to be entered");
+                        return false;
+                        flag = 1;
+                    }
+                    var letters = /^[a-zA-Z _ ]*$/;
+                    if (!$scope.name.match(letters)) {
+                        alert("Name fields should contain only alphabets");
+                        return false;
+                        flag = 1;
+                    }
+                    var check = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
+                    if (!$scope.email.match(check)) {
+                        alert("Enter valid email id");
+                        return false;
+                        flag = 1;
+                    }
+                    
+
+
+
+                }
+            })
+        </script>
+</body>
+
+</html>

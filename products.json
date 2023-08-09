@@ -1,0 +1,38 @@
+[
+    {
+        "image":"images/featured1/f1.png",
+        "type":"Ring",
+        "title":"Blaine Diamond Ring",
+        "strikeprice":"20,000",
+        "price":"15000"
+
+    },
+
+    {
+        "image":"images/featured1/f2.png",
+        "type":"Ring",
+        "title":"Blaine Diamond Ring",
+        "strikeprice":"120,000",
+        "price":"125000"
+
+    },
+
+    {
+        "image":"images/featured1/f4.png",
+        "type":"Necklace",
+        "title":"Blaine Diamond Necklace",
+        "strikeprice":"20,000",
+        "price":"15000"
+
+    },
+
+    {
+        "image":"images/featured1/f5.png",
+        "type":"Ring",
+        "title":"Blaine Diamond Ring",
+        "strikeprice":"20,000",
+        "price":"15000"
+
+    }
+
+]
